@@ -13,4 +13,25 @@ userMethods.getUsers = async (req, res) => {
     }
 };
 
+
+userMethods.createUsers = async (req, res) => {
+    try {
+        const { username,name,lastname } = req.body;
+        const newUser = new User({ username,name,lastname });
+        await newUser.save();
+        res.json('User created');
+    } catch (e) {
+        console.log(e)
+        res.json(e.errmsg);
+    }
+};
+
+userMethods.deleteUser = async (req, res) => {
+    const { id } = req.params;
+    await User.findByIdAndDelete(id);
+    res.json('User deleted');
+}
+
+
+
 module.exports = userMethods;
