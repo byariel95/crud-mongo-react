@@ -28,7 +28,7 @@ noteMethods.getNote = async (req,res)=>{
 noteMethods.updateNote = async (req,res)=>{
     
     const {title, content,author  } = req.body;
-    await Note.findOneAndUpdate(req.params.id,{
+    await Note.findByIdAndUpdate(req.params.id,{
         title,
         content,
         author,
@@ -38,7 +38,7 @@ noteMethods.updateNote = async (req,res)=>{
 };
 
 noteMethods.deleteNote = async (req,res)=>{
-     await Note.findOneAndDelete(req.params.id);
+     await Note.findByIdAndDelete(req.params.id);
     res.json('Note deleted');
 };
 
