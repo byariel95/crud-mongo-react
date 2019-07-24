@@ -28,7 +28,7 @@ noteMethods.getNote = async (req,res)=>{
 noteMethods.updateNote = async (req,res)=>{
     
     const {title, content,author  } = req.body;
-    await Note.findByIdAndUpdate(req.params.id,{
+    await Note.findOneAndUpdate({_id: req.params.id},{
         title,
         content,
         author,

@@ -4,7 +4,8 @@ const URL = process.env.MONGOOSE_URL ? process.env.MONGOOSE_URL: process.env.MON
 
 mongoose.connect(URL,{
     useNewUrlParser: true,
-    useCreateIndex: true
+    useCreateIndex: true,
+    useFindAndModify: false
 });
  
 const connection = mongoose.connection;
