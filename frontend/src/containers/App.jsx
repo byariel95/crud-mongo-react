@@ -14,7 +14,7 @@ const App = () => {
             <Router>
                 <Navigation/>
                 <Route path="/" exact component={NotesList}/>
-                <Route path="/norte/edit/:id" component={CreateNote}/>
+                <Route path="/note/edit/:id" component={CreateNote}/>
                 <Route path="/note/create" component={CreateNote}/>
                 <Route path="/user/add" component={CreateUser}/>
             </Router>
