@@ -20,7 +20,7 @@ const Navigation = () => {
                 <Link className="nav-link" to="/users">Users</Link>
             </li>
             <li className="nav-item">
-                <Link className="nav-link" to="/user/add">New User</Link>
+                <Link className="nav-link" to="/user/create">New User</Link>
             </li>
           </ul>
         </div>
