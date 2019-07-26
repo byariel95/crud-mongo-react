@@ -5,6 +5,7 @@ import Navigation from '../components/Navigation';
 import  NotesList  from '../components/NotesList';
 import  CreateNote  from '../components/CreateNote';
 import  CreateUser  from '../components/CreateUser';
+import UsersList from '../components/UsersList';
 
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
                 <Route path="/note/edit/:id" component={CreateNote}/>
                 <Route path="/note/create" component={CreateNote}/>
                 <Route path="/user/add" component={CreateUser}/>
+                <Route path="/users" component={UsersList}/>
             </Router>
         </Main>
     )

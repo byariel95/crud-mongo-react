@@ -11,10 +11,16 @@ const Navigation = () => {
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
-              <a className="nav-link">Notes</a>
+                <Link className="nav-link" to="/">Notes</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link">New Notes</a>
+                <Link className="nav-link" to="/note/create">New Note</Link>
+            </li>
+            <li className="nav-item">
+                <Link className="nav-link" to="/users">Users</Link>
+            </li>
+            <li className="nav-item">
+                <Link className="nav-link" to="/user/add">New User</Link>
             </li>
           </ul>
         </div>
