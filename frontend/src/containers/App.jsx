@@ -6,10 +6,14 @@ import  NotesList  from '../components/NotesList';
 import  CreateNote  from '../components/CreateNote';
 import  CreateUser  from '../components/CreateUser';
 import UsersList from '../components/UsersList';
+import getUserData from '../hooks/getUsers';
 
 
 const App = () => {
    
+    const data = getUserData();
+    console.log(data);
+     
     return(
         <Main>
             <Router>
